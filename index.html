@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Practice</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+
+</head>
+<body ng-app="loginApp">
+	<div id="fb-root"></div>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">A Search App</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse float-right" id="navbarColor02">
+			<ul class="navbar-nav mr-auto ">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Login</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<br>
+	<!-- jumbo -->
+	<div class="container-fluid">
+		<div class="jumbotron" ng-controller="loginCon">
+
+			<h1 class="display-3">Hello, user!</h1>
+			<p class="lead">This is a simple login application</p>
+			<hr class="my-4">
+
+			<div class="row">
+				<div class="col-4">
+					<button class="btn btn-primary" ng-click="getDetails()">Login</button>
+					<button class="btn btn-success" ng-click="sharePost()">Share</button>
+					<div id="status"></div>
+					<br>
+					<h5>Details</h5>
+					<ul>
+						<li ng-repeat="(a,d) in data">{{a}} - {{d}}</li>
+					</ul>
+				</div>
+			</div>
+
+
+		</div>
+
+
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://connect.facebook.net/en_US/all.js"></script>
+	<script src="script.js"></script>
+	</html>
